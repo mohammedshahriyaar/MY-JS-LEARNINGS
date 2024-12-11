@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>SHah le sath java Sript</h1>
+    <button id="start">start</button>        
+    <button id="stop">stop</button>
+</body>
+
+<script>
+    // setInterval(function()
+    // {
+    //     let a= new Date();
+    //     console.log("shah",a.toLocaleTimeString());
+    // })
+
+    const sayTime = function(name)
+    {
+        let a= new Date();
+        console.log(name,a.toLocaleTimeString());
+    }
+    // setInterval(sayTime,2000,"bla")
+
+
+    //clear interval to clear the the set interval;
+
+    // example
+    // let b = setInterval(sayTime,2000,"bla")
+    // clearInterval(b);
+
+
+    let b;
+    const start = document.querySelector('#start');
+    const stop = document.getElementById('stop');
+
+    start.addEventListener('click',function()
+    {
+        b = setInterval(sayTime,2000,"bla")
+    })
+
+    stop.addEventListener('click',function()
+    {
+        clearInterval(b);
+    })
+
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>SHah ke sath code</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+
+    //to make an ebent happen after some time
+    setTimeout( function()
+    {
+        console.log("shahhhhhhh")
+    },3000)
+
+
+
+    const changeme = function()
+    {
+        document.querySelector('h1').innerHTML="learn js with me"
+    }
+    //to stop that  time out we use clearTimeout
+
+    const bye = setTimeout(changeme,3000);
+    const stopme = document.querySelector('#stop')
+
+
+    stopme.addEventListener('click', function()
+    {
+        clearTimeout(bye);
+        console.log("stopped");
+    })
+
+</script>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=butt, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Button CLicked</button>
+</body>
+<script>
+    class  React{
+        constructor(){
+            this.library="React"
+            this.server="https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+                .addEventListener('click',this.handleCick.bind(this))//sending the this of this constructor also when handle click is handled
+        
+        }
+        handleCick()
+        {
+            console.log("button clicked");
+            console.log(this.server); //this contains both constructor details and also local to this
+            
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
